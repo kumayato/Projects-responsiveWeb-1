@@ -1,0 +1,740 @@
+/******************
+      初始化
+******************/
+html {
+    font-size: 62.5%;   /*相当于10px*/
+}
+body {
+    font-size: 1.2rem;   /*相当于12px*/
+    line-height: 1.5;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+ul,dl,dd,body,h1,h2,h3,h4,h5,h6,p,div {
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+input{
+    border: 0 none;
+    outline-style: none;
+    margin: 0 ;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/******************
+      工具样式
+******************/
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+.container {
+    width: 100%;
+}
+
+.browserupgrade {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    background-color: #888;
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/*header*/
+
+header {
+    width: 100%;
+}
+.nav-top {
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    color: #fff;
+    background: #555;
+    border-bottom: 1px solid #ecc000;
+}
+.nav-top li {
+    float: left;
+}
+.nav-top li + li {
+    border-left: 1px solid #fff;
+}
+.nav-top li > a {
+    color: #fff;
+    padding: 0 1.5rem;
+    display: block;
+    height: 100%;
+}
+
+/*媒体查询*/
+@media only screen and (max-width: 50em) {
+    .nav-top li > a {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 30em){
+    .nav-top li:nth-of-type(3),
+    .nav-top li:nth-of-type(4),
+    .nav-top > span {
+        display: none;
+    }
+}
+
+
+.nav-main{
+    width: 100%;
+}
+.nav-main a.brand {
+    padding: 1rem 1.5rem 0;
+    float: left;
+}
+.nav-main > ul {
+    float: right;
+}
+.nav-main li {
+    float: left;
+}
+.nav-main li {
+    border-left: 1px solid #e7e7e7;
+}
+
+.nav-main li > a {
+    display: block;
+    padding: 0 2.5rem;
+    height: 100%;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #7c7a65;
+}
+
+.nav-main li > a:hover {
+    color: #ffb300;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 50em) {
+    .nav-main > a.brand {
+        float: none;
+        display: block;
+        padding: 0;
+        margin: 1.5rem auto 0.5rem;
+        text-align: center;
+    }
+    .nav-main > ul {
+        float: none;
+        text-align: center;
+
+    }
+    .nav-main > ul > li {
+        display: inline-block;
+        float: none;
+        border: none;
+    }
+    .nav-main li > a {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 30em){
+    .nav-main li > a {
+        padding: 0 0.2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .nav-main li:first-of-type {
+        display: none;
+    }
+}
+
+/*transaction*/
+.transaction {
+    background-color: #7c7365;
+}
+.trans__content {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.trans__content-data {
+    float: left;
+    line-height: 3rem;
+    padding: 1rem;
+    color: #fff;
+}
+
+.trans__content-data span {
+    display: inline-block;
+}
+
+.trans__content-data .money {
+    font-size: 2.2rem;
+    color: #ff9900;
+    letter-spacing: 3px;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 3px #333 inset;
+}
+.trans__content-report {
+    line-height: 3rem;
+    padding: 1rem;
+    float: right;
+}
+
+/*媒体查询*/
+@media only screen and (max-width: 50em) {
+    .trans__content {
+        font-size: 1.2rem;
+    }
+
+    .trans__content-data .money {
+        font-size: 1.6rem;
+        color: #ff9900;
+        letter-spacing: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    .trans__content-data {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .trans__content-report {
+        padding: 0;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .transaction {
+        padding: 0.5rem 0;
+    }
+}
+
+
+
+/*feature*/
+.feature {
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 0;
+}
+
+/*
+-3rem是因为左右各设置了1rem的padding且一共有3rem的margin，分到每一个item，就是各1rem
+2rem+1rem = 3rem
+*/
+.feature > .feature__item {
+    display: inline-block;
+    width: calc(33.33333% - 3rem);
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+.feature > .feature__item + .feature__item {
+    margin-left: 1.5rem;
+}
+
+.feature > .feature__item h3 {
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    font-size: 3.3rem;
+    text-align: center;
+    color: #ff9900;
+}
+.feature > .feature__item .feature__item-desc {
+    display: inline-block;
+    width: 55%;
+    color: #999;
+    text-align: left;
+}
+
+/*媒体查询*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    .feature > .feature__item h3 {
+        display: block;
+        width: auto;
+    }
+    .feature > .feature__item .feature__item-desc {
+        display: block;
+        width: auto;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em) {
+    .feature > .feature__item {
+        display: block;
+        width: auto;
+    }
+    .feature > .feature__item + .feature__item {
+        margin-left:0;
+        margin-top: 1rem;
+    }
+}
+
+/*notice*/
+.notice {
+    width: 90%;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+.notice > a {
+    float: left;
+    display: inline-block;
+    width: 70%;
+    margin-left: 2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #666;
+}
+
+.notice > a > span{
+    color: #999;
+}
+
+.notice > a > span.time {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.notice > a:hover {
+    text-decoration: none;
+    color: #57a2f6;
+}
+.notice-more > a {
+    float: right;
+    margin: 0 2rem;
+    color: #ff9900;
+}
+
+/*媒体查询*/
+
+@media only screen and (max-width: 30em){
+    .notice {
+        width: 90%;
+        font-size: 1.2rem;
+        margin: 1rem auto;
+    }
+    .notice > a {
+        margin-left: 1rem;
+
+    }
+}
+
+/*product*/
+.product {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    background: #f5f9fa;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 0 4px #ccc;
+    margin-top: 2rem;
+}
+.product__title {
+    float: left;
+    width: 20%;
+    margin-top: 3rem;
+    text-align: center;
+    color: #635c51;
+}
+.product__title h2{
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #635c51;
+}
+.product__title p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.product__title p:first-of-type {
+    margin-top: 4rem;
+}
+
+.product__content {
+    float: right;
+    width: 79.5%;
+    border-left: 1px solid #eee;
+    background-color: #fff;
+}
+.product__content-item {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+.product__content-item > h3 {
+    float: left;
+    width: 30%;
+    padding: 2rem 0 1rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+.product__content-item > h3 span{
+    margin-right: 0.5rem;
+    font-size: 3.6rem;
+    color: #8b999d;
+}
+
+.product__content-item .info{
+    float: left;
+    width: 48%;
+    height: 100%;
+    padding: 2.2rem 0rem;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    font-size: 14px
+}
+.product__content-item .info p {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 56%;
+}
+
+.product__content-item .info p:last-of-type {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+}
+.product__content-item .info p span{
+    display: block;
+    font-size: 2.4rem;
+    color: #ff9900;
+}
+.product__content-item .info p i {
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #999;
+}
+.product__content-item .buy-button {
+    float: right;
+    width: calc(22% - 2.2rem);
+    padding: 2.4rem 1rem;
+}
+.product__content-item .buy-button a{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 12rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #fff;
+    background-color: #ff9900;
+    border-radius: 5px
+}
+
+.product__content-item > h3 > i {
+    display: block;
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #999;
+}
+a.disabled {
+    background: #ccc !important;
+    cursor: not-allowed;
+}
+
+/*媒体查询*/
+@media only screen and (max-width: 50em) {
+    .product__title {
+        float: none;
+        width:100%;
+        margin: 2rem 0;
+        font-size: 2.2rem;
+    }
+    .product__title h2{
+        font-size: 2.2rem;
+        display: inline-block;
+    }
+    .product__title p {
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    .product__title p:first-of-type {
+        margin-top: 0;
+    }
+    .product__content {
+        float: none;
+        width: 100%;
+    }
+    .product__content-item > h3 {
+        padding: 1rem 0;
+        font-size: 1.2rem;
+    }
+    .product__content-item > h3 span{
+        font-size: 3rem;
+    }
+
+    .product__content-item .info{
+        padding: 1.7rem 0rem;
+        font-size: 1.2rem;
+    }
+    .product__content-item .info p span{
+        font-size: 2rem;
+    }
+    .product__content-item .buy-button {
+        padding: 1.6rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 30em){
+    .product__title h2{
+        font-size: 2.2rem;
+        display:block;
+    }
+    .product__content-item > h3 {
+        width: 30%;
+        float: left ;
+        padding: 1rem 0;
+    }
+    .product__content-item > h3 span{
+        margin-right: 0;
+        font-size: 2rem;
+    }
+    .product__content-item .info{
+        float: right;
+        width: 68%;
+        padding: 1.2rem 0 1rem;
+        border: none;
+        border: 0;
+    }
+    .product__content-item .buy-button {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+}
+
+/*message*/
+.message {
+    padding: 3rem 0;
+    background: #fff;
+    border-top: 2px solid #eee;
+    margin-top: 2rem;
+}
+.message__container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.message__logo {
+    float: left;
+    display: block;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    width: 20%;
+    height: 35px;
+    background: url(../img/logo@1x.png) no-repeat left top;
+    background-size: 150px 35px;
+}
+
+.message__content {
+    float: right;
+    width: 80%;
+}
+.message__content > dl {
+    float: left;
+    width: 20%;
+}
+.message__content > dl > dt {
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 3rem
+}
+.message__content > dl > dd > a {
+    color: #666;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+/*媒体查询*/
+@media only screen and (max-width: 50em) {
+    .message__logo {
+        display: none;
+    }
+    .message__content {
+        float: none;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 30em) {
+    .message__content > dl > dt {
+        font-size: 1.2rem;
+        line-height: 2rem
+    }
+    .message__content > dl > dd > a {
+        color: #666;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+}
+
+/*footer*/
+footer {
+    padding: 3rem 0 5rem;
+    background-color: #ededed;
+    text-align: center;
+    color: #999;
+}
+footer ul {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+footer ul li{
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+footer ul li:last-of-type{
+    margin-right: 0;
+}
+
+footer ul li span {
+    display: block;
+    text-indent: -1000rem;
+    overflow: hidden;
+    background: url(https://i.alipayobjects.com/e/201307/jebmKcbrh.png) no-repeat;
+    background-size: 466px 447px;
+}
+
+span.icon-1 {
+    width: 38px;
+    height: 27px;
+    background-position: -369px -45px;
+}
+span.icon-2 {
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px
+}
+span.icon-3 {
+    width: 36px;
+    height: 27px;
+    background-position: -426px -90px;
+}
+span.icon-4 {
+    width: 63px;
+    height: 27px;
+    background-position: -401px -186px;
+}
+span.icon-5 {
+    width: 22px;
+    height: 27px;
+    background-position: -48px -48px;
+}
+span.icon-6 {
+    width: 75px;
+    height: 27px;
+    background-position: 0 -320px;
+}
+span.icon-7 {
+    width: 30px;
+    height: 30px;
+    background: url(https://os.alipayobjects.com/rmsportal/lybcjqloSPjMAFg.png) no-repeat;
+    background-size: 30px;
+}
+
+
+
